@@ -1,0 +1,3 @@
+[submodule "src/imada-installer"]
+	path = src/imada-installer
+	url = https://github.com/imadacore/imada-installer.git

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Imada
+Comment=Imada P2P Cryptocurrency
+Exec=imada-qt %u
+Terminal=false
+Type=Application
+Icon=imada128
+MimeType=x-scheme-handler/imada;
+Categories=Office;Finance;
+Name[en_AU]=Imada

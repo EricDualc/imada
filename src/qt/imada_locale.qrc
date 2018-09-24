@@ -1,0 +1,17 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ca">locale/imada_ca.qm</file>
+        <file alias="da">locale/imada_da.qm</file>
+        <file alias="de">locale/imada_de.qm</file>
+        <file alias="en">locale/imada_en.qm</file>
+        <file alias="en_US">locale/imada_en_US.qm</file>
+        <file alias="es">locale/imada_es.qm</file>
+        <file alias="fr_FR">locale/imada_fr_FR.qm</file>
+        <file alias="it">locale/imada_it.qm</file>
+        <file alias="ja">locale/imada_ja.qm</file>
+        <file alias="pt">locale/imada_pt.qm</file>
+        <file alias="ro_RO">locale/imada_ro_RO.qm</file>
+        <file alias="ru">locale/imada_ru.qm</file>
+        <file alias="zh_CN">locale/imada_zh_CN.qm</file>
+    </qresource>
+</RCC>

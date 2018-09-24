@@ -1,0 +1,26 @@
+[Unit]
+Description=IMADA's distributed currency daemon
+After=network.target
+
+[Service]
+User=imada
+Group=imada
+
+Type=forking
+PIDFile=/var/lib/imadad/imadad.pid
+
+ExecStart=/usr/bin/imadad -daemon -pid=/var/lib/imadad/imadad.pid \
+          -conf=/etc/imada/imada.conf -datadir=/var/lib/imadad
+
+ExecStop=-/usr/bin/imada-cli -conf=/etc/imada/imada.conf \
+         -datadir=/var/lib/imadad stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
