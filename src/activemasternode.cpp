@@ -8,7 +8,7 @@
 #include "clientversion.h"
 
 //
-// Bootup the masternode, look for a 16120 Imada input and register on the network
+// Bootup the masternode, look for a 61200 Imada input and register on the network
 //
 void CActiveMasternode::ManageStatus() {
     std::string errorMessage;

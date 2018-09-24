@@ -1776,19 +1776,11 @@ CAmount GetProofOfWorkReward(int64_t nFees, int nHeight)
     if (nHeight < 1) {
         nSubsidy = 1 * COIN;
     } else if (nHeight == 1) {
-        nSubsidy = 8000000 * COIN;
-    } else if (nHeight < 500) {
-        nSubsidy = 1 * COIN;
-    } else if (nHeight == 501) {
-        nSubsidy = 1000 * COIN;
-    } else if (nHeight < 1000000) {
-        nSubsidy = 10 * COIN;
-    } else if (nHeight < 1001000) {
-        nSubsidy = 30 * COIN;
-    } else if (nHeight < 5000000) {
-        nSubsidy = 10 * COIN;
+        nSubsidy = 110000000 * COIN;
+    } else if (nHeight == 81) {
+        nSubsidy = 1000000 * COIN;
     } else if (nHeight < 6000000) {
-        nSubsidy = 10 * COIN;
+        nSubsidy = 40 * COIN;
     } else {
         nSubsidy = 1 * COIN;
     }

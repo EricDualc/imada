@@ -90,7 +90,7 @@ struct CNodeStateStats;
 #define SNAPSHOT_BLOCK 299500
 #endif
 
-static const int64_t DARKSEND_COLLATERAL = (16120*COIN); //16120 IMADA
+static const int64_t DARKSEND_COLLATERAL = (61200*COIN); //61200 IMADA
 static const int64_t DARKSEND_FEE = (0.002*COIN); // reward masternode
 static const int64_t DARKSEND_POOL_MAX = (1999999.99*COIN);
 
@@ -181,7 +181,8 @@ void updateBlockSizeParams(unsigned int newBlockSize);
 inline bool IsProtocolV2(int nHeight) { return IsTestNet() || nHeight > 0; }
 inline int64_t GetMNCollateral(int nHeight) {
     if (IsTestNet() || Params().NetworkID() == CBaseChainParams::SEGWITTEST) return 50;
-    return nHeight>=30000 ? 16120 : 1999999;
+    //return nHeight>=30000 ? 16120 : 1999999;
+    return 61200;
 }
 
 struct BlockHasher {
