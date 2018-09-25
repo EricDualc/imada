@@ -81,11 +81,11 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-            ( 0,   uint256("0x00000bbf3005900734f608678ebf4fbe907458b3825ea8ea83ad8a64cf80a1cd"));
+            ( 0,   uint256("0x0000071c737396def38dabcb87d0780c37f0638ed1a492bb9d161a3f85fe8b49"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1537883490, // * UNIX timestamp of last checkpoint block
+    1537885821, // * UNIX timestamp of last checkpoint block
     0,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in UpdateTip debug.log lines)
     1000        // * estimated number of transactions per day after checkpoint
@@ -154,7 +154,7 @@ public:
         //TODO: fix cyclic dependency
         consensus.vDeployments[Consensus::SMART_CONTRACTS_HARDFORK].bit = 30;
 
-        nSwitchPhi2Block = 500000;
+        nSwitchPhi2Block = 0;
         nFirstSCBlock = 5000000;
         nPruneAfterHeight = 300000;
         nSplitRewardBlock = 300000;
@@ -179,7 +179,7 @@ public:
         const char* pszTimestamp = "Imada - Great project - ThankYou - sanit.sa"; // Input Activation code to activate blockchain
         CMutableTransaction txNew;
         txNew.nVersion = 1;
-        txNew.nTime = 1537883490;
+        txNew.nTime = 1537885821;
         txNew.nLockTime = 0;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -190,23 +190,23 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = BlockMerkleRoot(genesis);
         genesis.nVersion = 1;
-        genesis.nTime = 1537883490;
+        genesis.nTime = 1537885821;
         genesis.nBits = 0x1e0fffff;
-        genesis.nNonce = 193481;
+        genesis.nNonce = 4030164;
         genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // imada
         genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // imada
 
         consensus.hashGenesisBlock = genesis.GetHash();
 
-//        while (!CheckProof(genesis.GetHash(), genesis.nBits)) {
-//            genesis.nNonce ++;
-//        }
-//        std::cout << genesis.nNonce << std::endl;
-//        std::cout << genesis.GetHash().GetHex() << std::endl;
-//        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
+        while (!CheckProof(genesis.GetHash(), genesis.nBits)) {
+            genesis.nNonce ++;
+        }
+        std::cout << genesis.nNonce << std::endl;
+        std::cout << genesis.GetHash().GetHex() << std::endl;
+        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
 
-        assert(consensus.hashGenesisBlock == uint256("0x00000bbf3005900734f608678ebf4fbe907458b3825ea8ea83ad8a64cf80a1cd"));
-        assert(genesis.hashMerkleRoot == uint256("0xe7d4a8014b84c6c069a8b240f2a49a66dfe5d75839229b8bfbd7acfedbcb2a9e"));
+        assert(consensus.hashGenesisBlock == uint256("0x0000071c737396def38dabcb87d0780c37f0638ed1a492bb9d161a3f85fe8b49"));
+        assert(genesis.hashMerkleRoot == uint256("0xe2577a7050044922814e51d059b6799b1f052aef2f1d22681472468b7082476f"));
 
         ////////////////////////////////////////////////////////////////////////////////////////////////
         vSeeds.push_back(CDNSSeedData("52.197.69.103", "52.197.69.103"));        // Main seed
@@ -235,7 +235,7 @@ public:
         strSporkKey = "04a983220ea7a38a7106385003fef77896538a382a0dcc389cc45f3c98751d9af423a097789757556259351198a8aaa628a1fd644c3232678c5845384c744ff8d7";
 
         strDarksendPoolDummyAddress = "LgcjpYxWa5EB9KCYaRtpPgG8kgiWRvJY38";
-        nStartMasternodePayments = 1537883490;
+        nStartMasternodePayments = 1537885821;
 
         nStakingRoundPeriod = 120; // 2 minutes a round
         nStakingInterval = 22;
