@@ -205,8 +205,8 @@ public:
 //        std::cout << genesis.GetHash().GetHex() << std::endl;
 //        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
 
-        assert(consensus.hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0x"));
+        assert(consensus.hashGenesisBlock == uint256("0x00000bbf3005900734f608678ebf4fbe907458b3825ea8ea83ad8a64cf80a1cd"));
+        assert(genesis.hashMerkleRoot == uint256("0xe7d4a8014b84c6c069a8b240f2a49a66dfe5d75839229b8bfbd7acfedbcb2a9e"));
 
         ////////////////////////////////////////////////////////////////////////////////////////////////
         vSeeds.push_back(CDNSSeedData("52.197.69.103", "52.197.69.103"));        // Main seed
