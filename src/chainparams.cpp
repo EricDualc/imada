@@ -198,12 +198,12 @@ public:
 
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        while (!CheckProof(genesis.GetHash(), genesis.nBits)) {
-            genesis.nNonce ++;
-        }
-        std::cout << genesis.nNonce << std::endl;
-        std::cout << genesis.GetHash().GetHex() << std::endl;
-        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
+//        while (!CheckProof(genesis.GetHash(), genesis.nBits)) {
+//            genesis.nNonce ++;
+//        }
+//        std::cout << genesis.nNonce << std::endl;
+//        std::cout << genesis.GetHash().GetHex() << std::endl;
+//        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
 
         assert(consensus.hashGenesisBlock == uint256("0x0000071c737396def38dabcb87d0780c37f0638ed1a492bb9d161a3f85fe8b49"));
         assert(genesis.hashMerkleRoot == uint256("0xe2577a7050044922814e51d059b6799b1f052aef2f1d22681472468b7082476f"));
@@ -239,7 +239,7 @@ public:
 
         nStakingRoundPeriod = 120; // 2 minutes a round
         nStakingInterval = 22;
-        nStakingMinAge = 36 * 60 * 60;
+        nStakingMinAge = 360;
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
