@@ -198,12 +198,12 @@ public:
 
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        while (!CheckProof(genesis.GetHash(), genesis.nBits)) {
-            genesis.nNonce ++;
-        }
-        std::cout << genesis.nNonce << std::endl;
-        std::cout << genesis.GetHash().GetHex() << std::endl;
-        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
+//        while (!CheckProof(genesis.GetHash(), genesis.nBits)) {
+//            genesis.nNonce ++;
+//        }
+//        std::cout << genesis.nNonce << std::endl;
+//        std::cout << genesis.GetHash().GetHex() << std::endl;
+//        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
 
         assert(consensus.hashGenesisBlock == uint256("0x0000078d18fd5e860c0c6a11c806c12160085405d6f6b5cc64b5eeb452254896"));
         assert(genesis.hashMerkleRoot == uint256("0xe95c17ab888c4b2f1a0143a2e209cdd0343049730de808ebd9c7a64dd0a13899"));
