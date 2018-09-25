@@ -81,7 +81,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-            ( 0,   uint256(""));
+            ( 0,   uint256("0x00000bbf3005900734f608678ebf4fbe907458b3825ea8ea83ad8a64cf80a1cd"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -192,18 +192,18 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1537883490;
         genesis.nBits = 0x1e0fffff;
-        genesis.nNonce = 0;
+        genesis.nNonce = 193481;
         genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // imada
         genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // imada
 
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        while (!CheckProof(genesis.GetHash(), genesis.nBits)) {
-            genesis.nNonce ++;
-        }
-        std::cout << genesis.nNonce << std::endl;
-        std::cout << genesis.GetHash().GetHex() << std::endl;
-        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
+//        while (!CheckProof(genesis.GetHash(), genesis.nBits)) {
+//            genesis.nNonce ++;
+//        }
+//        std::cout << genesis.nNonce << std::endl;
+//        std::cout << genesis.GetHash().GetHex() << std::endl;
+//        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
 
         assert(consensus.hashGenesisBlock == uint256("0x"));
         assert(genesis.hashMerkleRoot == uint256("0x"));
