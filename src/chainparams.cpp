@@ -172,7 +172,7 @@ public:
         nDefaultPort = 13332;
         nMaxReorganizationDepth = 100;
         nMinerThreads = 0;
-        nMaturity = 10;
+        nMaturity = 79;
         nMasternodeCountDrift = 20;
         nModifierUpdateBlock = 615800;
 
