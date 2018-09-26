@@ -234,7 +234,7 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "04a983220ea7a38a7106385003fef77896538a382a0dcc389cc45f3c98751d9af423a097789757556259351198a8aaa628a1fd644c3232678c5845384c744ff8d7";
 
-        strDarksendPoolDummyAddress = "LgcjpYxWa5EB9KCYaRtpPgG8kgiWRvJY38";
+        strDarksendPoolDummyAddress = "WauRuUpM8BAjyFnFaoNsPgxdhsZKdSLMbS";
         nStartMasternodePayments = 1537955011;
 
         nStakingRoundPeriod = 120; // 2 minutes a round
