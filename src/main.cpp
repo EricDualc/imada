@@ -1777,12 +1777,12 @@ CAmount GetProofOfWorkReward(int64_t nFees, int nHeight)
         nSubsidy = 1 * COIN;
     } else if (nHeight == 1) {
         nSubsidy = 110000000 * COIN;
-    } else if (nHeight == 81) {
+    } else if (nHeight == 11) {
         nSubsidy = 1000000 * COIN;
-    } else if (nHeight < 6000000) {
-        nSubsidy = 40 * COIN;
+    } else if (nHeight < 30000000) {
+        nSubsidy = 8 * COIN;
     } else {
-        nSubsidy = 1 * COIN;
+        nSubsidy = 0;
     }
 
     if (nHeight < LAST_HEIGHT_FEE_BLOCK) {
@@ -1800,8 +1800,10 @@ CAmount GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees, int nHeight)
     // First 100,000 blocks double stake for masternode ready
     if (nHeight < 100000) {
         nSubsidy = 2 * COIN;
-    } else {
+    } else if (nHeight < 30000000) {
         nSubsidy = 1 * COIN;
+    } else {
+        nSubsidy = 0;
     }
 
     return nSubsidy + nFees;

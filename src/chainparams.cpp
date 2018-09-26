@@ -81,11 +81,11 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-            ( 0,   uint256("0x00000d0fe94f1b39ddb8532f2af39fb8debaa5431772a5c2f7ea924fd64546fe"));
+            ( 0,   uint256("0x000001f66a3fbd68cfab80df92d0b066521e4835093e6da4c6f1779fcc831073"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1537955011, // * UNIX timestamp of last checkpoint block
+    1537961189, // * UNIX timestamp of last checkpoint block
     1,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in UpdateTip debug.log lines)
     1000        // * estimated number of transactions per day after checkpoint
@@ -138,7 +138,7 @@ public:
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1026; // 95% of 1080 is 1026
         consensus.nMinerConfirmationWindow = 1080; // nPowTargetTimespan / nPowTargetSpacing
-        consensus.nLastPOWBlock = 6000000;
+        consensus.nLastPOWBlock = 30000000;
         // Deployment of SegWit (BIP141 and BIP143)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1530428034; // 01/07/2018
@@ -179,7 +179,7 @@ public:
         const char* pszTimestamp = "Imada - Great project - ThankYou - sanit.sa"; // Input Activation code to activate blockchain
         CMutableTransaction txNew;
         txNew.nVersion = 1;
-        txNew.nTime = 1537955011;
+        txNew.nTime = 1537961189;
         txNew.nLockTime = 0;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -190,9 +190,9 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = BlockMerkleRoot(genesis);
         genesis.nVersion = 1;
-        genesis.nTime = 1537955011;
+        genesis.nTime = 1537961189;
         genesis.nBits = 0x1e0fffff;
-        genesis.nNonce = 889536;
+        genesis.nNonce = 2053491;
         genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // imada
         genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // imada
 
@@ -205,8 +205,8 @@ public:
 //        std::cout << genesis.GetHash().GetHex() << std::endl;
 //        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
 
-        assert(consensus.hashGenesisBlock == uint256("0x00000d0fe94f1b39ddb8532f2af39fb8debaa5431772a5c2f7ea924fd64546fe"));
-        assert(genesis.hashMerkleRoot == uint256("0xec4517c29f76b50fbde53e207ec9f3d238da4c73565a523323e84749a57a3e15"));
+        assert(consensus.hashGenesisBlock == uint256("0x000001f66a3fbd68cfab80df92d0b066521e4835093e6da4c6f1779fcc831073"));
+        assert(genesis.hashMerkleRoot == uint256("0x85cfdee7b7f14eef395394d9c5820d061bc7c8905d872bc7b4019c6480a6ae95"));
 
         ////////////////////////////////////////////////////////////////////////////////////////////////
         vSeeds.push_back(CDNSSeedData("52.197.69.103", "52.197.69.103"));        // Main seed
@@ -234,8 +234,8 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "04a983220ea7a38a7106385003fef77896538a382a0dcc389cc45f3c98751d9af423a097789757556259351198a8aaa628a1fd644c3232678c5845384c744ff8d7";
 
-        strDarksendPoolDummyAddress = "WauRuUpM8BAjyFnFaoNsPgxdhsZKdSLMbS";
-        nStartMasternodePayments = 1537955011;
+        strDarksendPoolDummyAddress = "WPH39L22MF15jRdP4Rni9K9GU1KQFpFBFe";
+        nStartMasternodePayments = 1537961189;
 
         nStakingRoundPeriod = 120; // 2 minutes a round
         nStakingInterval = 22;
@@ -276,7 +276,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 577836800;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 2577836900; // Never / undefined
-        consensus.nLastPOWBlock = 6000000;
+        consensus.nLastPOWBlock = 30000000;
 
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
@@ -497,7 +497,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 999999999999ULL;
-        consensus.nLastPOWBlock = 6000000;
+        consensus.nLastPOWBlock = 30000000;
 
         nSwitchPhi2Block = 1200;
         //nFirstSCBlock = 300000;
