@@ -2,15 +2,6 @@
 
 "FIRST OF ITS KIND"
 
-Imadacore is GNU AGPLv3 licensed.
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fimadacore%2Fimada.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FImadaCore%2Fimada?ref=badge_shield) [![Build Status](https://travis-ci.org/IMADA-Core/imada.svg?branch=master)](https://travis-ci.org/IMADA-Core/imada) [![GitHub version](https://badge.fury.io/gh/IMADA-Core%2Fimada.png)](https://badge.fury.io/gh/IMADA-Core%2Fimada.png) [![HitCount](http://hits.dwyl.io/ImadaCore/imada.svg)](http://hits.dwyl.io/ImadaCore/imada)
-<a href="https://discord.gg/27xFP5Y"><img src="https://discordapp.com/api/guilds/364500397999652866/embed.png" alt="Discord server" /></a> <a href="https://twitter.com/intent/follow?screen_name=IMADA_COIN"><img src="https://img.shields.io/twitter/follow/IMADA_COIN.svg?style=social&logo=twitter" alt="follow on Twitter"></a>
-                                                                                                                                                     
-[![Build history](https://buildstats.info/travisci/chart/IMADA-Core/imada?branch=master)](https://travis-ci.org/IMADA-Core/imada?branch=master)
-
-[Website](https://imadacore.io) — [IMADAtre + IMADAGate](https://github.com/IMADA-Core/imadatre) - [PoS Web Wallet](https://imada.poswallet.io) — [Block Explorer](https://explorer.imadacore.io/) — [Blog](https://reddit.com/r/IMADACoin) — [Forum](https://bitcointalk.org/index.php?topic=2254046.0) — [Telegram](https://t.me/IMADAcoinOfficialChat) — [Twitter](https://twitter.com/IMADA_Coin)
-
 Features
 =============
 
@@ -264,9 +255,5 @@ not straightforward.
 
  We try to prompt our users for the basic information We always need for new issues.
  Please fill out the issue template below and submit it to our discord channel
-  <a href="https://discord.gg/27xFP5Y"><img src="https://discordapp.com/api/guilds/364500397999652866/embed.png" alt="Discord server" /></a>
  
  [ISSUE_TEMPLATE](doc/template/ISSUE_TEMPLATE_example.md)
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FImadaCore%2Fimada.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FImadaCore%2Fimada?ref=badge_large)
